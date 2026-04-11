@@ -1,0 +1,60 @@
+# 源码位于同仓库的 thirdparty/lite.ai.toolkit 目录（本地子模块）
+# 从 ports/lite-ai-toolkit/ 向上三级即可到达 thirdparty/
+set(SOURCE_PATH "${CMAKE_CURRENT_LIST_DIR}/../../../lite.ai.toolkit")
+
+# 注意：lite.ai.toolkit 的 CMakeLists.txt 无条件调用 enable_language(CUDA)，
+# 因此无论是否启用 tensorrt feature，系统均需安装 CUDA Toolkit（nvcc 需可寻址）。
+
+vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
+    FEATURES
+        tensorrt ENABLE_TENSORRT
+)
+
+# ── CUDA / TensorRT 路径（仅 tensorrt feature 时真正生效）────────────────────
+# 优先读取环境变量，回退到常用默认路径。
+# 使用方式：export CUDA_DIR=... && export TENSORRT_DIR=... 后再执行 vcpkg install
+set(_LITE_CUDA_DIR "/usr/local/cuda")
+set(_LITE_TENSORRT_DIR "/usr/local/tensorrt")
+if(DEFINED ENV{CUDA_DIR})
+    set(_LITE_CUDA_DIR "$ENV{CUDA_DIR}")
+endif()
+if(DEFINED ENV{TENSORRT_DIR})
+    set(_LITE_TENSORRT_DIR "$ENV{TENSORRT_DIR}")
+endif()
+# ─────────────────────────────────────────────────────────────────────────────
+
+vcpkg_cmake_configure(
+    SOURCE_PATH "${SOURCE_PATH}"
+    OPTIONS
+        -DENABLE_TEST=OFF
+        -DENABLE_ONNXRUNTIME=ON
+        # onnxruntime：使用 vcpkg 已安装版本（system prefix style）
+        # 头文件位于 ${CURRENT_INSTALLED_DIR}/include/onnxruntime/，
+        # lite.ai.toolkit/cmake/onnxruntime.cmake 会自动识别此布局。
+        -DOnnxRuntime_DIR=${CURRENT_INSTALLED_DIR}
+        # opencv：通过 vcpkg toolchain 注入的 CMAKE_PREFIX_PATH 自动 find_package，
+        # lite.ai.toolkit/cmake/opencv.cmake 优先走 find_package(OpenCV QUIET)。
+        # 无需额外传参。
+        #
+        # CUDA_DIR / TensorRT_DIR 声明为 CMake Cache 变量（即使不启用 TRT 也无副作用）
+        -DCUDA_DIR=${_LITE_CUDA_DIR}
+        -DTensorRT_DIR=${_LITE_TENSORRT_DIR}
+        ${FEATURE_OPTIONS}
+    MAYBE_UNUSED_VARIABLES
+        CUDA_DIR
+        TensorRT_DIR
+)
+
+vcpkg_cmake_install()
+
+# lite.ai.toolkit-config.cmake 通过 get_filename_component("../../..") 推导安装前缀，
+# 依赖配置文件处于 lib/cmake/lite.ai.toolkit/（三级深度）。
+# 若调用 vcpkg_cmake_config_fixup 将其移至 share/lite.ai.toolkit/（两级深度），
+# 路径导航会偏移一级，因此此处跳过 vcpkg_cmake_config_fixup。
+
+file(REMOVE_RECURSE
+    "${CURRENT_PACKAGES_DIR}/debug/include"
+    "${CURRENT_PACKAGES_DIR}/debug/share"
+)
+
+vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE")

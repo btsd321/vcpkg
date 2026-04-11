@@ -1,0 +1,7 @@
+linden-bsp provides CMake targets:
+
+    find_package(linden_bsp CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE linden::linden_bsp)
+
+Note: linden-bsp requires the Hikvision MVS SDK to be installed at /opt/MVS
+or set the MVCAM_SDK_PATH environment variable before building.

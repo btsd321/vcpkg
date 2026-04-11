@@ -1,0 +1,16 @@
+lite-ai-toolkit provides CMake variables (non-target API):
+
+    find_package(lite.ai.toolkit CONFIG REQUIRED)
+    include_directories(${lite.ai.toolkit_INCLUDE_DIRS})
+    link_directories(${lite.ai.toolkit_LIBS_DIRS})
+    target_link_libraries(main PRIVATE ${lite.ai.toolkit_LIBS})
+
+Note: lite.ai.toolkit unconditionally requires CUDA (nvcc) at build time,
+regardless of whether the tensorrt feature is enabled.
+
+To enable TensorRT backend, set the following environment variables before
+running vcpkg install, then install with the [tensorrt] feature:
+
+    export CUDA_DIR=/usr/local/cuda-12.9
+    export TENSORRT_DIR=/path/to/TensorRT-x.x.x.x
+    vcpkg install lite-ai-toolkit[tensorrt]:x64-linux

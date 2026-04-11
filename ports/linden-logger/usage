@@ -1,0 +1,4 @@
+linden-logger provides CMake targets:
+
+    find_package(linden_logger CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE linden::linden_logger)

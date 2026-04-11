@@ -1,0 +1,15 @@
+{
+  "name": "linden-bsp",
+  "version": "1.0.0",
+  "description": "Linden BSP - Board Support Package library for camera and common utilities (depends on HikvisionMVS SDK)",
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "linden-logger"
+    },
+    {
+      "name": "spdlog",
+      "version>=": "1.17.0"
+    }
+  ]
+}

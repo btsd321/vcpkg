@@ -1,0 +1,25 @@
+{
+  "name": "linden-algorithm",
+  "version": "1.0.0",
+  "description": "Linden Algorithm - C++ algorithm library with scanner, thread, common, point_cloud modules",
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "linden-logger"
+    },
+    {
+      "name": "spdlog",
+      "version>=": "1.17.0"
+    },
+    {
+      "name": "opencv4",
+      "features": ["cuda", "dnn-cuda", "contrib", "nonfree"]
+    },
+    "eigen3"
+  ],
+  "features": {
+    "cuda": {
+      "description": "Enable CUDA acceleration for point_cloud module"
+    }
+  }
+}

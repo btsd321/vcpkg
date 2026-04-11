@@ -1,0 +1,10 @@
+linden-algorithm provides CMake targets:
+
+    find_package(linden_algorithm CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE linden::algorithm)
+
+Note: linden-algorithm requires zbar as a system dependency:
+    sudo apt-get install libzbar-dev
+
+To enable CUDA acceleration for the point_cloud module:
+    vcpkg install linden-algorithm[cuda]:x64-linux

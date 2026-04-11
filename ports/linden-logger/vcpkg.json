@@ -1,0 +1,12 @@
+{
+  "name": "linden-logger",
+  "version": "1.0.0",
+  "description": "Linden Logger - header-only C++ logging library based on spdlog",
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "spdlog",
+      "version>=": "1.17.0"
+    }
+  ]
+}

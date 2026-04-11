@@ -1,0 +1,27 @@
+{
+  "name": "lite-ai-toolkit",
+  "version": "0.3.1",
+  "description": "A lite C++ AI toolkit of 100+ models with ONNXRuntime/TensorRT backends",
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "opencv4",
+      "features": ["cuda", "dnn-cuda", "contrib", "nonfree"]
+    },
+    {
+      "name": "onnxruntime",
+      "features": ["cuda"]
+    }
+  ],
+  "features": {
+    "tensorrt": {
+      "description": "Enable TensorRT inference backend. Requires system-installed CUDA and TensorRT; set env vars CUDA_DIR and TENSORRT_DIR before running vcpkg install.",
+      "dependencies": [
+        {
+          "name": "onnxruntime",
+          "features": ["cuda"]
+        }
+      ]
+    }
+  }
+}
