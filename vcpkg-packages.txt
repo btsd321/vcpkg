@@ -1,0 +1,293 @@
+abseil:x64-linux                                  20260107.1#2        Abseil is an open-source collection of C++ libra...
+at-spi2-atk:x64-linux                             2.38.0#2            Implementation of the ATK interfaces in terms of...
+at-spi2-core:x64-linux                            2.44.1#5            Base DBus XML interfaces for accessibility, the ...
+atk:x64-linux                                     2.38.0#11           GNOME Accessibility Toolkit
+boost-algorithm:x64-linux                         1.90.0#1            Boost algorithm module
+boost-align:x64-linux                             1.90.0#1            Boost align module
+boost-any:x64-linux                               1.90.0#1            Boost any module
+boost-array:x64-linux                             1.90.0#1            Boost array module
+boost-asio:x64-linux                              1.90.0#1            Boost asio module
+boost-asio[deadline-timer]:x64-linux                                  Build with deadline_timer support
+boost-asio[spawn]:x64-linux                                           Build with spawn (stackful coroutines) support
+boost-assert:x64-linux                            1.90.0#1            Boost assert module
+boost-atomic:x64-linux                            1.90.0#1            Boost atomic module
+boost-bimap:x64-linux                             1.90.0#1            Boost bimap module
+boost-bind:x64-linux                              1.90.0#1            Boost bind module
+boost-chrono:x64-linux                            1.90.0#1            Boost chrono module
+boost-circular-buffer:x64-linux                   1.90.0#1            Boost circular_buffer module
+boost-cmake:x64-linux                             1.90.0#1            Boost cmake module
+boost-concept-check:x64-linux                     1.90.0#1            Boost concept_check module
+boost-config:x64-linux                            1.90.0#1            Boost config module
+boost-container-hash:x64-linux                    1.90.0#1            Boost container_hash module
+boost-container:x64-linux                         1.90.0#1            Boost container module
+boost-context:x64-linux                           1.90.0#1            Boost context module
+boost-conversion:x64-linux                        1.90.0#1            Boost conversion module
+boost-core:x64-linux                              1.90.0#1            Boost core module
+boost-date-time:x64-linux                         1.90.0#1            Boost date_time module
+boost-describe:x64-linux                          1.90.0#1            Boost describe module
+boost-detail:x64-linux                            1.90.0#1            Boost detail module
+boost-dynamic-bitset:x64-linux                    1.90.0#1            Boost dynamic_bitset module
+boost-endian:x64-linux                            1.90.0#1            Boost endian module
+boost-exception:x64-linux                         1.90.0#1            Boost exception module
+boost-filesystem:x64-linux                        1.90.0#1            Boost filesystem module
+boost-foreach:x64-linux                           1.90.0#1            Boost foreach module
+boost-function-types:x64-linux                    1.90.0#1            Boost function_types module
+boost-function:x64-linux                          1.90.0#1            Boost function module
+boost-functional:x64-linux                        1.90.0#1            Boost functional module
+boost-fusion:x64-linux                            1.90.0#1            Boost fusion module
+boost-graph:x64-linux                             1.90.0#1            Boost graph module
+boost-headers:x64-linux                           1.90.0#1            Boost headers module
+boost-integer:x64-linux                           1.90.0#1            Boost integer module
+boost-interprocess:x64-linux                      1.90.0#1            Boost interprocess module
+boost-intrusive:x64-linux                         1.90.0#1            Boost intrusive module
+boost-io:x64-linux                                1.90.0#1            Boost io module
+boost-iostreams:x64-linux                         1.90.0#1            Boost iostreams module
+boost-iostreams[bzip2]:x64-linux                                      Support bzip2 filters
+boost-iostreams[lzma]:x64-linux                                       Support LZMA/xz filters
+boost-iostreams[zlib]:x64-linux                                       Support zlib filters
+boost-iostreams[zstd]:x64-linux                                       Support zstd filters
+boost-iterator:x64-linux                          1.90.0#1            Boost iterator module
+boost-lambda:x64-linux                            1.90.0#1            Boost lambda module
+boost-lexical-cast:x64-linux                      1.90.0#1            Boost lexical_cast module
+boost-math:x64-linux                              1.90.0#1            Boost math module
+boost-move:x64-linux                              1.90.0#1            Boost move module
+boost-mp11:x64-linux                              1.90.0#1            Boost mp11 module
+boost-mpl:x64-linux                               1.90.0#1            Boost mpl module
+boost-multi-array:x64-linux                       1.90.0#1            Boost multi_array module
+boost-multi-index:x64-linux                       1.90.0#1            Boost multi_index module
+boost-numeric-conversion:x64-linux                1.90.0#1            Boost numeric_conversion module
+boost-optional:x64-linux                          1.90.0#1            Boost optional module
+boost-parameter:x64-linux                         1.90.0#1            Boost parameter module
+boost-phoenix:x64-linux                           1.90.0#1            Boost phoenix module
+boost-pool:x64-linux                              1.90.0#1            Boost pool module
+boost-predef:x64-linux                            1.90.0#1            Boost predef module
+boost-preprocessor:x64-linux                      1.90.0#1            Boost preprocessor module
+boost-property-map:x64-linux                      1.90.0#1            Boost property_map module
+boost-property-tree:x64-linux                     1.90.0#1            Boost property_tree module
+boost-proto:x64-linux                             1.90.0#1            Boost proto module
+boost-ptr-container:x64-linux                     1.90.0#1            Boost ptr_container module
+boost-random:x64-linux                            1.90.0#1            Boost random module
+boost-range:x64-linux                             1.90.0#1            Boost range module
+boost-ratio:x64-linux                             1.90.0#1            Boost ratio module
+boost-regex:x64-linux                             1.90.0#1            Boost regex module
+boost-scope:x64-linux                             1.90.0#1            Boost scope module
+boost-serialization:x64-linux                     1.90.0#1            Boost serialization module
+boost-signals2:x64-linux                          1.90.0#1            Boost signals2 module
+boost-smart-ptr:x64-linux                         1.90.0#1            Boost smart_ptr module
+boost-sort:x64-linux                              1.90.0#1            Boost sort module
+boost-spirit:x64-linux                            1.90.0#1            Boost spirit module
+boost-static-assert:x64-linux                     1.90.0#1            Boost static_assert module
+boost-system:x64-linux                            1.90.0#1            Boost system module
+boost-thread:x64-linux                            1.90.0#1            Boost thread module
+boost-throw-exception:x64-linux                   1.90.0#1            Boost throw_exception module
+boost-tokenizer:x64-linux                         1.90.0#1            Boost tokenizer module
+boost-tti:x64-linux                               1.90.0#1            Boost tti module
+boost-tuple:x64-linux                             1.90.0#1            Boost tuple module
+boost-type-index:x64-linux                        1.90.0#1            Boost type_index module
+boost-type-traits:x64-linux                       1.90.0#1            Boost type_traits module
+boost-typeof:x64-linux                            1.90.0#1            Boost typeof module
+boost-uninstall:x64-linux                         1.90.0#1            Internal vcpkg port used to uninstall Boost
+boost-unordered:x64-linux                         1.90.0#1            Boost unordered module
+boost-utility:x64-linux                           1.90.0#1            Boost utility module
+boost-uuid:x64-linux                              1.90.0#1            Boost uuid module
+boost-variant2:x64-linux                          1.90.0#1            Boost variant2 module
+boost-variant:x64-linux                           1.90.0#1            Boost variant module
+boost-winapi:x64-linux                            1.90.0#1            Boost winapi module
+boost-xpressive:x64-linux                         1.90.0#1            Boost xpressive module
+brotli:x64-linux                                  1.2.0               a generic-purpose lossless compression algorithm...
+bzip2:x64-linux                                   1.0.8#6             bzip2 is a freely available, patent free, high-q...
+bzip2[tool]:x64-linux                                                 Builds bzip2 executable
+cairo:x64-linux                                   1.18.4#1            Cairo is a 2D graphics library with support for ...
+cairo[fontconfig]:x64-linux                                           Build with fontconfig
+cairo[freetype]:x64-linux                                             Use the freetype font backend
+cairo[gobject]:x64-linux                                              Build the gobject module
+cairo[x11]:x64-linux                                                  Build with X11 support
+cereal:x64-linux                                  1.3.2#1             a header-only C++11 serialization library (built...
+cgns:x64-linux                                    4.5.1               The CFD General Notation System (CGNS) provides ...
+cgns[hdf5]:x64-linux                                                  Enable hdf5 support
+cgns[lfs]:x64-linux                                                   Enable LFS support
+cpuinfo:x64-linux                                 2025-09-06          CPU INFOrmation library (x86/x86-64/ARM/ARM64, L...
+cuda:x64-linux                                    10.1#13             A parallel computing platform and programming model
+cudnn-frontend:x64-linux                          1.15.0              cudnn_frontend provides a c++ wrapper for the cu...
+cudnn:x64-linux                                   7.6.5#16            NVIDIA's cuDNN deep neural network acceleration ...
+curl:x64-linux                                    8.19.0              A library for transferring data with URLs
+curl[non-http]:x64-linux                                              Enables protocols beyond HTTP/HTTPS/HTTP2/HTTP3
+curl[openssl]:x64-linux                                               TLS support (OpenSSL)
+curl[ssl]:x64-linux                                                   Default SSL / TLS implementation.
+cxxopts:x64-linux                                 3.3.1#1             A lightweight C++ option parser library, support...
+date:x64-linux                                    3.0.4               A date and time library based on the C++17 <chro...
+dbus:x64-linux                                    1.16.2#3            D-Bus specification and reference implementation...
+dbus[systemd]:x64-linux                                               Build with systemd at_console support
+dirent:x64-linux                                  1.26                Dirent is a C/C++ programming interface that all...
+dlpack:x64-linux                                  1.3                 DLPack is an open in-memory tensor structure for...
+double-conversion:x64-linux                       3.4.0               Efficient binary-decimal and decimal-binary conv...
+egl-registry:x64-linux                            2025-05-27          EGL API and Extension Registry
+eigen3:x64-linux                                  5.0.1               C++ template library for linear algebra: matrice...
+expat:x64-linux                                   2.7.5               XML parser library written in C
+exprtk:x64-linux                                  0.0.3               Simple to use, easy to integrate and extremely e...
+fast-float:x64-linux                              8.2.4               Fast and exact implementation of the C++ from_ch...
+flann:x64-linux                                   2022-10-28          Fast Library for Approximate Nearest Neighbors
+flatbuffers:x64-linux                             25.12.19            FlatBuffers is a cross platform serialization li...
+fmt:x64-linux                                     12.1.0              {fmt} is an open-source formatting library provi...
+fontconfig:x64-linux                              2.17.1#2            Library for configuring and customizing font acc...
+fontconfig[iconv]:x64-linux                                           Iconv support
+freetype:x64-linux                                2.14.3              A library to render fonts.
+freetype[brotli]:x64-linux                                            Support decompression of WOFF2 streams
+freetype[bzip2]:x64-linux                                             Support bzip2 compressed fonts.
+freetype[png]:x64-linux                                               Support PNG compressed OpenType embedded bitmaps.
+freetype[zlib]:x64-linux                                              Use zlib instead of internal library for DEFLATE
+fribidi:x64-linux                                 1.0.16              GNU FriBidi is an implementation of the Unicode ...
+gdk-pixbuf:x64-linux                              2.44.6              Image loading library.
+gdk-pixbuf[jpeg]:x64-linux                                            Enable JPEG loader (requires libjpeg)
+gdk-pixbuf[png]:x64-linux                                             Enable PNG loader (requires libpng)
+gdk-pixbuf[tiff]:x64-linux                                            Enable TIFF loader (requires libtiff)
+gettext-libintl:x64-linux                         0.22.5#4            The libintl C library from GNU gettext-runtime.
+gettext:x64-linux                                 0.22.5#4            A GNU framework to help produce multi-lingual me...
+gettext[tools]:x64-linux                                              Build gettext tools
+gklib:x64-linux                                   2025-07-06#1        General helper libraries for KarypisLab.
+gl2ps:x64-linux                                   1.4.2#5             OpenGL to PostScript Printing Library
+glew:x64-linux                                    2.3.1               The OpenGL Extension Wrangler Library (GLEW) is ...
+glib:x64-linux                                    2.88.0              Portable, general-purpose utility library.
+gperf:x64-linux                                   3.3                 GNU perfect hash function generator
+gtk3:x64-linux                                    3.24.52#1           Portable library for creating graphical user int...
+harfbuzz:x64-linux                                13.0.1              HarfBuzz OpenType text shaping engine
+harfbuzz[freetype]:x64-linux                                          Enable FreeType support
+hdf5:x64-linux                                    2.1.1               HDF5 is a data model, library, and file format f...
+hdf5[hl]:x64-linux                                                    Build HIGH Level HDF5 Library
+hdf5[szip]:x64-linux                                                  Build with szip
+hdf5[zlib]:x64-linux                                                  Build with zlib
+jsoncpp:x64-linux                                 1.9.6               JsonCpp is a C++ library that allows manipulatin...
+libaec:x64-linux                                  1.1.6               Adaptive Entropy Coding library
+libcap:x64-linux                                  2.77                A library for getting and setting POSIX.1e (form...
+libepoxy:x64-linux                                1.5.10#2            Epoxy is a library for handling OpenGL function ...
+libffi:x64-linux                                  3.5.2               Portable, high level programming interface to va...
+libharu:x64-linux                                 2.4.6               libharu - free PDF library
+libiconv:x64-linux                                1.18#3              iconv() text conversion.
+libjpeg-turbo:x64-linux                           3.1.4.1             libjpeg-turbo is a JPEG image codec that uses SI...
+liblzma:x64-linux                                 5.8.3               Compression library with an API similar to that ...
+libmount:x64-linux                                2.41.3#1            Block device identification library from util-linux
+libogg:x64-linux                                  1.3.6#1             Ogg is a multimedia container format, and the na...
+libpng:x64-linux                                  1.6.56              libpng is a library implementing an interface fo...
+libsystemd:x64-linux                              257.8#1             Libsystemd
+libtheora:x64-linux                               1.2.0               Theora is a free and open video compression form...
+libuuid:x64-linux                                 1.0.3#16            Universally unique id library
+libwebp:x64-linux                                 1.6.0#2             WebP codec: library to encode and decode images ...
+libwebp[libwebpmux]:x64-linux                                         Build the libwebpmux library
+libwebp[nearlossless]:x64-linux                                       Enable near-lossless encoding
+libwebp[simd]:x64-linux                                               Enable any SIMD optimization.
+libx11:x64-linux                                  1.8.1#5             The X Window System is a network-transparent win...
+libxau:x64-linux                                  1.0.12#1            Functions for handling Xauthority files and entr...
+libxcrypt:x64-linux                               4.5.2               libxcrypt is a modern library for one-way hashin...
+libxdmcp:x64-linux                                1.1.5#1             X Display Manager Control Protocol library
+libxext:x64-linux                                 1.3.7#1             Xlib-based library for common extensions to the ...
+libxfixes:x64-linux                               6.0.2#1             Xlib-based library for the XFIXES Extension
+libxi:x64-linux                                   1.8.2#1             Xlib library for the X Input Extension
+libxml2:x64-linux                                 2.15.2              Libxml2 is the XML C parser and toolkit develope...
+libxml2[iconv]:x64-linux                                              Add ICONV support
+libxml2[tools]:x64-linux                                              Build tools
+libxml2[zlib]:x64-linux                                               Use ZLib
+libxrandr:x64-linux                               1.5.5#1             Xlib Resize, Rotate and Reflection (RandR) exten...
+libxrender:x64-linux                              0.9.12#1            library for the Render Extension to the X11 prot...
+libxslt:x64-linux                                 1.1.45              Libxslt is a XSLT library implemented in C for X...
+libxslt[profiler]:x64-linux                                           Build with profiling support
+libxslt[thread]:x64-linux                                             Enable multi-threading support
+libxslt[tools]:x64-linux                                              Build the utilities
+libxtst:x64-linux                                 1.2.5#1             Xlib-based library for XTEST & RECORD extensions
+lz4:x64-linux                                     1.10.0              Lossless compression algorithm, providing compre...
+metis:x64-linux                                   2025-07-04#1        Serial Graph Partitioning and Fill-reducing Matr...
+ms-gsl:x64-linux                                  4.2.1               Microsoft implementation of the Guidelines Suppo...
+nanoflann:x64-linux                               1.9.0               nanoflann is a C++11 header-only library for bui...
+netcdf-c:x64-linux                                4.9.3#3             A set of self-describing, machine-independent da...
+netcdf-c[dap]:x64-linux                                               DAP remote access client support
+netcdf-c[nczarr]:x64-linux                                            NCZarr cloud storage access support
+netcdf-c[netcdf-4]:x64-linux                                          netCDF-4 support
+nlohmann-json:x64-linux                           3.12.0#2            JSON for Modern C++
+nvidia-cutlass:x64-linux                          4.3.5               CUDA Templates for Linear Algebra Subroutines
+onnx:x64-linux                                    1.19.0              Open standard for machine learning interoperability
+onnxruntime:x64-linux                             1.23.2              ONNX Runtime: cross-platform, high performance M...
+onnxruntime[cuda]:x64-linux                                           Build with CUDA support
+opencv4:x64-linux                                 4.12.0#1            Open Source Computer Vision Library
+opencv4[calib3d]:x64-linux                                            calib3d module
+opencv4[contrib]:x64-linux                                            opencv_contrib module
+opencv4[cuda]:x64-linux                                               CUDA support for opencv
+opencv4[cudnn]:x64-linux                                              cuDNN support for opencv
+opencv4[dnn-cuda]:x64-linux                                           Build dnn module with CUDA support
+opencv4[dnn]:x64-linux                                                Enable dnn module
+opencv4[fs]:x64-linux                                                 Enable filesystem support
+opencv4[gapi]:x64-linux                                               Enable gapi module
+opencv4[gtk]:x64-linux                                                GTK support for opencv
+opencv4[highgui]:x64-linux                                            highgui module
+opencv4[intrinsics]:x64-linux                                         Enable intrinsics
+opencv4[jpeg]:x64-linux                                               JPEG support for opencv
+opencv4[nonfree]:x64-linux                                            allow nonfree and unredistributable libraries
+opencv4[png]:x64-linux                                                PNG support for opencv
+opencv4[quirc]:x64-linux                                              Enable QR code module
+opencv4[thread]:x64-linux                                             Enable thread support
+opencv4[tiff]:x64-linux                                               TIFF support for opencv
+opencv4[webp]:x64-linux                                               WebP support for opencv
+opengl-registry:x64-linux                         2026-01-26          OpenGL, OpenGL ES, and OpenGL ES-SC API and Exte...
+opengl:x64-linux                                  2022-12-04#3        Open Graphics Library (OpenGL)[3][4][5] is a cro...
+openssl:x64-linux                                 3.6.2               OpenSSL is an open source project that provides ...
+optional-lite:x64-linux                           3.6.0               A C++17-like optional, a nullable object for C++...
+pango:x64-linux                                   1.57.1              Text and font handling library.
+pcl:x64-linux                                     1.15.1#1            Point Cloud Library (PCL) is open source library...
+pcl[cuda]:x64-linux                                                   CUDA support for PCL
+pcl[visualization]:x64-linux                                          Build visualization
+pcre2:x64-linux                                   10.47               Regular Expression pattern matching using the sa...
+pcre2[jit]:x64-linux                                                  Enable support for Just-In-Time compiling regex ...
+pcre2[platform-default-features]:x64-linux                            Enable default features
+pegtl:x64-linux                                   3.2.8               The Parsing Expression Grammar Template Library ...
+pixman:x64-linux                                  0.46.4#1            Pixman is a low-level software library for pixel...
+proj:x64-linux                                    9.8.1               PROJ library for cartographic projections
+proj[net]:x64-linux                                                   Enable network support
+proj[tiff]:x64-linux                                                  Enable TIFF support to read some grids
+protobuf:x64-linux                                6.33.4#1            Google's language-neutral, platform-neutral, ext...
+pthread-stubs:x64-linux                           0.5#1               Stub replacements for POSIX Threads functions.
+pthread:x64-linux                                 3.0.0#2             empty package, linking to other port
+pthreads:x64-linux                                3.0.0#14            Meta-package that provides PThreads4W on Windows...
+pugixml:x64-linux                                 1.15#1              Light-weight, simple and fast XML parser for C++...
+qhull:x64-linux                                   8.0.2#6             computes the convex hull, Delaunay triangulation...
+quirc:x64-linux                                   1.2                 quirc is one of the C library available for scan...
+re2:x64-linux                                     2025-11-05          RE2 is a fast, safe, thread-friendly alternative...
+safeint:x64-linux                                 3.0.28              SafeInt is a class library for C++ that manages ...
+seacas:x64-linux                                  2022-11-22#10       The Sandia Engineering Analysis Code Access Syst...
+spdlog:x64-linux                                  1.17.0              Very fast, header-only/compiled, C++ logging lib...
+spdlog[fmt]:x64-linux                                                 Use fmt library
+spdlog[tz-offset]:x64-linux                                           Omit %z timezone offset (use on platforms withou...
+sqlite3:x64-linux                                 3.53.0              SQLite is a software library that implements a s...
+sqlite3[json1]:x64-linux                                              Enable JSON functionality for sqlite3
+sqlite3[tool]:x64-linux                                               Build sqlite3 executable
+tiff:x64-linux                                    4.7.1               A library that supports the manipulation of TIFF...
+tiff[jpeg]:x64-linux                                                  Support JPEG compression in TIFF image files
+tiff[lzma]:x64-linux                                                  Support LZMA compression in TIFF image files
+tiff[zip]:x64-linux                                                   Support ZIP/deflate compression in TIFF image files
+tinyxml2:x64-linux                                11.0.0              A simple, small, efficient, C++ XML parser
+utf8-range:x64-linux                              6.33.4              Fast UTF-8 validation with Range algorithm (NEON...
+utfcpp:x64-linux                                  4.0.9               UTF-8 with C++ in a Portable Way
+vcpkg-boost:x64-linux                             2025-03-29          
+vcpkg-cmake-config:x64-linux                      2024-05-23          
+vcpkg-cmake-get-vars:x64-linux                    2025-05-29          
+vcpkg-cmake:x64-linux                             2024-04-23          
+vcpkg-get-python-packages:x64-linux               2025-04-05          
+vcpkg-make:x64-linux                              2026-01-01          
+vcpkg-tool-meson:x64-linux                        1.9.0#4             Meson build system
+verdict:x64-linux                                 1.4.2               Compute quality functions of 2 and 3-dimensional...
+vtk-compile-tools:x64-linux                       9.3.0-pv5.12.1#1    Tools needed for crosscompiling VTK
+vtk:x64-linux                                     9.3.0-pv5.12....    Software system for 3D computer graphics, image ...
+vtk[cgns]:x64-linux                                                   CGNS functionality for VTK
+vtk[fontconfig]:x64-linux                                             Enables fontconfig for rendering
+vtk[libharu]:x64-linux                                                PDF functionality for VTK
+vtk[libtheora]:x64-linux                                              Compressed ogg functionality for VTK
+vtk[netcdf]:x64-linux                                                 NetCDF functionality for VTK
+vtk[opengl]:x64-linux                                                 All opengl related modules
+vtk[proj]:x64-linux                                                   Geographic projection functionality for VTK
+vtk[seacas]:x64-linux                                                 Exodus and IOSS functionality for VTK
+vtk[sql]:x64-linux                                                    SQL functionality for VTK
+xcb-proto:x64-linux                               1.14.1#3            XML-XCB protocol descriptions used by libxcb for...
+xcb-util-m4:x64-linux                             2022-07-01          GNU autoconf macros shared across XCB projects
+xcb:x64-linux                                     1.14#4              C interface to the X Window System protocol, whi...
+xorg-macros:x64-linux                             1.20.2#1            X.org macros utilities.
+xproto:x64-linux                                  2021.5              X Window System unified protocol definitions
+xtrans:x64-linux                                  1.6.0#1             xtrans - X Network Transport layer shared code
+zlib:x64-linux                                    1.3.1               A compression library
+zstd:x64-linux                                    1.5.7               Zstandard - Fast real-time compression algorithm
