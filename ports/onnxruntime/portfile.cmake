@@ -15,6 +15,7 @@ vcpkg_from_github(
     PATCHES
         fix-cmake.patch # .framework install, external library workarounds(abseil-cpp, eigen3)
         fix-cmake-cuda.patch
+        fix-duplicate-schema-registration.patch # fix debug crash: duplicate ONNX schema registration (issue #26319)
 )
 
 find_program(PROTOC NAMES protoc PATHS "${CURRENT_HOST_INSTALLED_DIR}/tools/protobuf" REQUIRED NO_DEFAULT_PATH NO_CMAKE_PATH)
