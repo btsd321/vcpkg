@@ -39,6 +39,11 @@ vcpkg_cmake_configure(
         # CUDA_DIR / TensorRT_DIR 声明为 CMake Cache 变量（即使不启用 TRT 也无副作用）
         -DCUDA_DIR=${_LITE_CUDA_DIR}
         -DTensorRT_DIR=${_LITE_TENSORRT_DIR}
+        # -Wl,-Bsymbolic: required when statically linking ffmpeg into a shared library.
+        # ffmpeg x86 asm uses R_X86_64_PC32 relocations which are rejected by the linker
+        # unless symbols are bound within the shared library at link time.
+        # See: https://ffmpeg.org/platform.html#Advanced-linking-configuration
+        "-DCMAKE_SHARED_LINKER_FLAGS=-Wl,-Bsymbolic"
         ${FEATURE_OPTIONS}
     MAYBE_UNUSED_VARIABLES
         CUDA_DIR
