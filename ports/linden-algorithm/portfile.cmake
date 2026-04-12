@@ -15,6 +15,10 @@ vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
     OPTIONS
         -DBUILD_SHARED_LIBS=ON
+        # -Wl,-Bsymbolic: required when statically linking opencv (which embeds ffmpeg) into a shared library.
+        # ffmpeg x86 asm uses R_X86_64_PC32 relocations which are rejected unless symbols are bound at link time.
+        # See: https://ffmpeg.org/platform.html#Advanced-linking-configuration
+        "-DCMAKE_SHARED_LINKER_FLAGS=-Wl,-Bsymbolic"
         ${FEATURE_OPTIONS}
 )
 
