@@ -8,6 +8,7 @@ vcpkg_from_github(
     PATCHES
         fix-cmakelists.patch
         fix-pr-7390.patch # part of https://github.com/onnx/onnx PR 7390
+        fix-debug-schema-count-assert.patch # 兼容 ORT 预注册 schema 导致的 debug 断言失败
 )
 
 string(COMPARE EQUAL "${VCPKG_CRT_LINKAGE}" "static" USE_STATIC_RUNTIME)

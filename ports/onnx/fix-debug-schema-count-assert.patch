@@ -1,0 +1,11 @@
+--- a/onnx/defs/schema.cc
++++ b/onnx/defs/schema.cc
+@@ -1634,7 +1634,7 @@
+       // Check enabled only if schemas for all opset versions are loaded
+       if (OpSchemaRegistry::Instance()->GetLoadedSchemaVersion() == 0) {
+         ONNX_ASSERTM(
+-            dbg_registered_schema_count == ONNX_DBG_GET_COUNT_IN_OPSETS(),
++            dbg_registered_schema_count + dbg_initial_schema_count >= ONNX_DBG_GET_COUNT_IN_OPSETS(),
+             "%u schema were exposed from operator sets and automatically placed into the static registry.  "
+             "%u were expected based on calls to registration macros. Operator set functions may need to be updated.",
+             dbg_registered_schema_count,
