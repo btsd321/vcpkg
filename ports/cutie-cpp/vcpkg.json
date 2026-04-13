@@ -1,0 +1,38 @@
+{
+  "name": "cutie-cpp",
+  "version": "0.1.0",
+  "description": "C++17 inference library for Cutie video object segmentation (VOS) model, supporting ONNXRuntime/CUDA and optional TensorRT backends",
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    },
+    {
+      "name": "linden-logger"
+    },
+    {
+      "name": "opencv4",
+      "features": ["cuda", "contrib"]
+    },
+    {
+      "name": "onnxruntime",
+      "features": ["cuda"]
+    }
+  ],
+  "features": {
+    "tensorrt": {
+      "description": "Enable TensorRT inference backend. Requires system-installed CUDA and TensorRT; set env vars CUDA_DIR and TENSORRT_DIR before running vcpkg install.",
+      "dependencies": [
+        {
+          "name": "onnxruntime",
+          "features": ["cuda"]
+        }
+      ]
+    }
+  }
+}

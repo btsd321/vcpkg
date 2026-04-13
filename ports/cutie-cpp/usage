@@ -1,0 +1,12 @@
+cutie-cpp provides CMake targets:
+
+    find_package(cutie CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE cutie::cutie)
+
+To enable TensorRT backend, install with:
+
+    vcpkg install cutie-cpp[tensorrt]
+
+Note: CUDA Toolkit must be installed on the system. For TensorRT, also set:
+    export CUDA_DIR=/usr/local/cuda
+    export TENSORRT_DIR=/path/to/tensorrt
