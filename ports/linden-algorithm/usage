@@ -1,7 +1,11 @@
 linden-algorithm provides CMake targets:
 
     find_package(linden_algorithm CONFIG REQUIRED)
-    target_link_libraries(main PRIVATE linden::algorithm)
+    target_link_libraries(main PRIVATE linden::linden_algorithm)
+
+    # 子模块目标（按需单独链接）:
+    #   linden::scanner  —— 条码/二维码扫描
+    #   linden::thread   —— ThreadPool / ObjectPool / Team
 
 Note: linden-algorithm requires zbar as a system dependency:
     sudo apt-get install libzbar-dev
