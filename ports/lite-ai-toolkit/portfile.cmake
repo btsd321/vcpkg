@@ -62,11 +62,13 @@ vcpkg_cmake_install()
 # 所以需要先 fixup，再修补路径推导从 3 层改为 2 层。
 vcpkg_cmake_config_fixup(PACKAGE_NAME lite.ai.toolkit CONFIG_PATH lib/cmake/lite.ai.toolkit)
 
-# 修补路径推导：share/lite.ai.toolkit/ -> share -> root（2 层）
+# 修补路径推导：vcpkg_cmake_config_fixup 将 cmake 文件从 lib/cmake/lite.ai.toolkit/（3层）
+# 移至 share/lite.ai.toolkit/（2层），因此需将路径推导从 ../../.. 改为 ../..。
+# 注意：变量名必须与 lite.ai.toolkit.cmake.in 模板中的实际名称一致。
 vcpkg_replace_string(
     "${CURRENT_PACKAGES_DIR}/share/lite.ai.toolkit/lite.ai.toolkit.cmake"
-    "get_filename_component(LITE_AI_INSTALL_PREFIX \"\${LITE_AI_CMAKE_DIR}/../../..\" ABSOLUTE)"
-    "get_filename_component(LITE_AI_INSTALL_PREFIX \"\${LITE_AI_CMAKE_DIR}/../..\" ABSOLUTE)"
+    "get_filename_component(_LITE_AI_PREFIX \"\${_LITE_AI_CMAKE_DIR}/../../..\" ABSOLUTE)"
+    "get_filename_component(_LITE_AI_PREFIX \"\${_LITE_AI_CMAKE_DIR}/../..\" ABSOLUTE)"
 )
 
 file(REMOVE_RECURSE
