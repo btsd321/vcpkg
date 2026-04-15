@@ -17,9 +17,13 @@ set(_LITE_CUDA_DIR "/usr/local/cuda")
 set(_LITE_TENSORRT_DIR "/usr/local/tensorrt")
 if(DEFINED ENV{CUDA_DIR})
     set(_LITE_CUDA_DIR "$ENV{CUDA_DIR}")
+elseif(DEFINED ENV{CUDA_HOME})
+    set(_LITE_CUDA_DIR "$ENV{CUDA_HOME}")
 endif()
 if(DEFINED ENV{TENSORRT_DIR})
     set(_LITE_TENSORRT_DIR "$ENV{TENSORRT_DIR}")
+elseif(DEFINED ENV{TENSORRT_HOME})
+    set(_LITE_TENSORRT_DIR "$ENV{TENSORRT_HOME}")
 endif()
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -55,11 +59,15 @@ vcpkg_cmake_install()
 # lite.ai.toolkit-config.cmake 通过 get_filename_component("../../..") 推导安装前缀，
 # 依赖配置文件处于 lib/cmake/lite.ai.toolkit/（三级深度）。
 # 若调用 vcpkg_cmake_config_fixup 将其移至 share/lite.ai.toolkit/（两级深度），
-# 路径导航会偏移一级，因此此处跳过 vcpkg_cmake_config_fixup。
+# 路径导航会偏移一级，因此此处跳过 vcpkg_cmake_config_fixup，
+# 并用策略标志告知 vcpkg 允许 cmake 文件留在 lib/cmake/。
+set(VCPKG_POLICY_SKIP_MISPLACED_CMAKE_FILES_CHECK enabled)
+set(VCPKG_POLICY_ALLOW_EMPTY_FOLDERS enabled)
 
 file(REMOVE_RECURSE
     "${CURRENT_PACKAGES_DIR}/debug/include"
     "${CURRENT_PACKAGES_DIR}/debug/share"
+    "${CURRENT_PACKAGES_DIR}/include/lite/bin"
 )
 
 file(INSTALL "${CMAKE_CURRENT_LIST_DIR}/usage" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}")
