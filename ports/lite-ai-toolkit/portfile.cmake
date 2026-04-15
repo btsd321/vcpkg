@@ -56,13 +56,18 @@ vcpkg_cmake_configure(
 
 vcpkg_cmake_install()
 
-# lite.ai.toolkit-config.cmake 通过 get_filename_component("../../..") 推导安装前缀，
-# 依赖配置文件处于 lib/cmake/lite.ai.toolkit/（三级深度）。
-# 若调用 vcpkg_cmake_config_fixup 将其移至 share/lite.ai.toolkit/（两级深度），
-# 路径导航会偏移一级，因此此处跳过 vcpkg_cmake_config_fixup，
-# 并用策略标志告知 vcpkg 允许 cmake 文件留在 lib/cmake/。
-set(VCPKG_POLICY_SKIP_MISPLACED_CMAKE_FILES_CHECK enabled)
-set(VCPKG_POLICY_ALLOW_EMPTY_FOLDERS enabled)
+# lite.ai.toolkit-config.cmake include 的 lite.ai.toolkit.cmake 中通过
+# get_filename_component("../../..") 从 lib/cmake/lite.ai.toolkit/ 推导安装前缀。
+# vcpkg_cmake_config_fixup 会将 cmake 文件从 lib/cmake/ 移到 share/（2 层深度），
+# 所以需要先 fixup，再修补路径推导从 3 层改为 2 层。
+vcpkg_cmake_config_fixup(PACKAGE_NAME lite.ai.toolkit CONFIG_PATH lib/cmake/lite.ai.toolkit)
+
+# 修补路径推导：share/lite.ai.toolkit/ -> share -> root（2 层）
+vcpkg_replace_string(
+    "${CURRENT_PACKAGES_DIR}/share/lite.ai.toolkit/lite.ai.toolkit.cmake"
+    "get_filename_component(LITE_AI_INSTALL_PREFIX \"\${LITE_AI_CMAKE_DIR}/../../..\" ABSOLUTE)"
+    "get_filename_component(LITE_AI_INSTALL_PREFIX \"\${LITE_AI_CMAKE_DIR}/../..\" ABSOLUTE)"
+)
 
 file(REMOVE_RECURSE
     "${CURRENT_PACKAGES_DIR}/debug/include"
