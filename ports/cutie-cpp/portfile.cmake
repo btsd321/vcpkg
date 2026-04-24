@@ -14,8 +14,8 @@ set(_CUTIE_TENSORRT_DIR "/usr/local/tensorrt")
 if(DEFINED ENV{CUDA_DIR})
     set(_CUTIE_CUDA_DIR "$ENV{CUDA_DIR}")
 endif()
-if(DEFINED ENV{TENSORRT_DIR})
-    set(_CUTIE_TENSORRT_DIR "$ENV{TENSORRT_DIR}")
+if(DEFINED ENV{TENSORRT_ROOT})
+    set(_CUTIE_TENSORRT_DIR "$ENV{TENSORRT_ROOT}")
 endif()
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -27,11 +27,11 @@ vcpkg_cmake_configure(
         -DENABLE_ONNXRUNTIME=ON
         # TensorRT 路径声明（即使不启用 TRT 也无副作用）
         -DCUDA_DIR=${_CUTIE_CUDA_DIR}
-        -DTensorRT_DIR=${_CUTIE_TENSORRT_DIR}
+        -DTENSORRT_ROOT=${_CUTIE_TENSORRT_DIR}
         ${FEATURE_OPTIONS}
     MAYBE_UNUSED_VARIABLES
         CUDA_DIR
-        TensorRT_DIR
+        TENSORRT_ROOT
 )
 
 vcpkg_cmake_install()
