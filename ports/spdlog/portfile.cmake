@@ -24,10 +24,9 @@ if(NOT VCPKG_TARGET_IS_WINDOWS AND SPDLOG_WCHAR_FILENAMES)
     message(FATAL_ERROR "Build option 'SPDLOG_WCHAR_FILENAMES' is for Windows.")
 endif()
 
-# 强制编译为动态库，避免多个 .so 各自静态链接导致 ODR 冲突
-# 原因：linden_bsp、cutie、linden_algorithm 等多个库都依赖 spdlog，
-# 若各自静态链接会导致进程中存在多份 spdlog 实例，引发 free(): invalid pointer
-set(SPDLOG_BUILD_SHARED ON)
+# 静态链接 spdlog，避免与 ROS2 系统 libspdlog.so（fmt v8）产生符号冲突。
+# 业务层通过 linden_logger 的 ILogger 接口传递 logger，不依赖 spdlog 全局 registry。
+set(SPDLOG_BUILD_SHARED OFF)
 
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
@@ -37,6 +36,10 @@ vcpkg_cmake_configure(
         -DSPDLOG_BUILD_SHARED=${SPDLOG_BUILD_SHARED}
         -DSPDLOG_WCHAR_FILENAMES=${SPDLOG_WCHAR_FILENAMES}
         -DSPDLOG_BUILD_EXAMPLE=OFF
+        -DCMAKE_C_VISIBILITY_PRESET=hidden
+        -DCMAKE_CXX_VISIBILITY_PRESET=hidden
+        -DCMAKE_VISIBILITY_INLINES_HIDDEN=ON
+        -DCMAKE_POSITION_INDEPENDENT_CODE=ON
 )
 
 vcpkg_cmake_install()
