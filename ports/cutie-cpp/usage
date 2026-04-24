@@ -8,5 +8,5 @@ To enable TensorRT backend, install with:
     vcpkg install cutie-cpp[tensorrt]
 
 Note: CUDA Toolkit must be installed on the system. For TensorRT, also set:
-    export CUDA_DIR=/usr/local/cuda
-    export TENSORRT_ROOT=/path/to/tensorrt
+    export CUDA_DIR=/usr/local/cuda          # or CUDA_HOME
+    export TENSORRT_ROOT=/path/to/tensorrt  # or TENSORRT_HOME (project default)

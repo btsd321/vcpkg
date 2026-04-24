@@ -13,9 +13,14 @@ set(_CUTIE_CUDA_DIR "/usr/local/cuda")
 set(_CUTIE_TENSORRT_DIR "/usr/local/tensorrt")
 if(DEFINED ENV{CUDA_DIR})
     set(_CUTIE_CUDA_DIR "$ENV{CUDA_DIR}")
+elseif(DEFINED ENV{CUDA_HOME})
+    set(_CUTIE_CUDA_DIR "$ENV{CUDA_HOME}")
 endif()
+# 优先 TENSORRT_ROOT，回退 TENSORRT_HOME（项目 .usrconfig 使用该变量名）
 if(DEFINED ENV{TENSORRT_ROOT})
     set(_CUTIE_TENSORRT_DIR "$ENV{TENSORRT_ROOT}")
+elseif(DEFINED ENV{TENSORRT_HOME})
+    set(_CUTIE_TENSORRT_DIR "$ENV{TENSORRT_HOME}")
 endif()
 # ─────────────────────────────────────────────────────────────────────────────
 
