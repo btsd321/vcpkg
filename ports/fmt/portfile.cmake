@@ -12,6 +12,7 @@ vcpkg_cmake_configure(
         -DFMT_CMAKE_DIR=share/fmt
         -DFMT_TEST=OFF
         -DFMT_DOC=OFF
+        -DBUILD_SHARED_LIBS=ON
 )
 
 vcpkg_cmake_install()

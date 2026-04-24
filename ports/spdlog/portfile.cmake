@@ -24,7 +24,10 @@ if(NOT VCPKG_TARGET_IS_WINDOWS AND SPDLOG_WCHAR_FILENAMES)
     message(FATAL_ERROR "Build option 'SPDLOG_WCHAR_FILENAMES' is for Windows.")
 endif()
 
-string(COMPARE EQUAL "${VCPKG_LIBRARY_LINKAGE}" "dynamic" SPDLOG_BUILD_SHARED)
+# 强制编译为动态库，避免多个 .so 各自静态链接导致 ODR 冲突
+# 原因：linden_bsp、cutie、linden_algorithm 等多个库都依赖 spdlog，
+# 若各自静态链接会导致进程中存在多份 spdlog 实例，引发 free(): invalid pointer
+set(SPDLOG_BUILD_SHARED ON)
 
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
