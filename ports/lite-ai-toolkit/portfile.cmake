@@ -24,6 +24,8 @@ if(DEFINED ENV{TENSORRT_DIR})
     set(_LITE_TENSORRT_DIR "$ENV{TENSORRT_DIR}")
 elseif(DEFINED ENV{TENSORRT_HOME})
     set(_LITE_TENSORRT_DIR "$ENV{TENSORRT_HOME}")
+elseif(DEFINED ENV{TENSORRT_ROOT})
+    set(_LITE_TENSORRT_DIR "$ENV{TENSORRT_ROOT}")
 endif()
 # ─────────────────────────────────────────────────────────────────────────────
 
