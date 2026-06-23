@@ -19,11 +19,7 @@
       "name": "spdlog",
       "version>=": "1.17.0"
     },
-    {
-      "name": "opencv",
-      "default-features": false,
-      "features": ["core", "imgcodecs", "imgproc", "video", "videoio"]
-    }
+    "opencv"
   ],
   "features": {
     "hik": {
