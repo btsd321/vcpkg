@@ -1,7 +1,7 @@
 {
   "name": "linden-bsp",
   "version": "1.0.0",
-  "description": "Linden BSP - Board Support Package library for camera and common utilities (depends on HikvisionMVS SDK)",
+  "description": "Linden BSP - Board Support Package library for camera and common utilities",
   "license": "MIT",
   "dependencies": [
     {
@@ -18,6 +18,18 @@
     {
       "name": "spdlog",
       "version>=": "1.17.0"
+    },
+    {
+      "name": "opencv",
+      "default-features": false,
+      "features": ["core", "imgcodecs", "imgproc", "video", "videoio"]
     }
-  ]
+  ],
+  "features": {
+    "hik": {
+      "description": "Enable Hikvision camera driver support (requires MVS SDK installed at /opt/MVS or $MVCAM_SDK_PATH)",
+      "dependencies": []
+    }
+  },
+  "default-features": ["hik"]
 }

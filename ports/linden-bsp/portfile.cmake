@@ -1,12 +1,20 @@
 # 源码位于同仓库的 thirdparty/linden_bsp 目录（git submodule）
-# commit: c3ecc91c8e74971653492bff1a5f8b99a107c720
-# 从 ports/linden-bsp/ 向上三级即可到达 thirdparty/
-set(SOURCE_PATH "${CMAKE_CURRENT_LIST_DIR}/../../../linden_bsp")
+# master 分支：CMakeLists.txt 位于 cpp/ 子目录
+# 从 ports/linden-bsp/ 向上三级到达 thirdparty/，再进入 linden_bsp/cpp/
+set(SOURCE_PATH "${CMAKE_CURRENT_LIST_DIR}/../../../linden_bsp/cpp")
+
+# 根据 feature 设置编译选项
+if("hik" IN_LIST FEATURES)
+    set(BUILD_HIK_CAMERA ON)
+else()
+    set(BUILD_HIK_CAMERA OFF)
+endif()
 
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
     OPTIONS
         -DBUILD_TESTS=OFF
+        -DBUILD_HIK_CAMERA=${BUILD_HIK_CAMERA}
 )
 
 vcpkg_cmake_install()
