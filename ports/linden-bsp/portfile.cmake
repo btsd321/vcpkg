@@ -10,11 +10,18 @@ else()
     set(BUILD_HIK_CAMERA OFF)
 endif()
 
+if("rvc" IN_LIST FEATURES)
+    set(BUILD_RVC_CAMERA ON)
+else()
+    set(BUILD_RVC_CAMERA OFF)
+endif()
+
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
     OPTIONS
         -DBUILD_TESTS=OFF
         -DBUILD_HIK_CAMERA=${BUILD_HIK_CAMERA}
+        -DBUILD_RVC_CAMERA=${BUILD_RVC_CAMERA}
 )
 
 vcpkg_cmake_install()

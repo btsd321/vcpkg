@@ -25,6 +25,13 @@
     "hik": {
       "description": "Enable Hikvision camera driver support (requires MVS SDK installed at /opt/MVS or $MVCAM_SDK_PATH)",
       "dependencies": []
+    },
+    "rvc": {
+      "description": "Enable RVC 3D depth camera driver support (requires RVC SDK and PCL/Eigen)",
+      "dependencies": [
+        "pcl",
+        "eigen3"
+      ]
     }
   },
   "default-features": ["hik"]
